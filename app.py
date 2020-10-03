@@ -81,9 +81,10 @@ while run:
             run = False
 
         if event.type == pygame.MOUSEBUTTONUP:
-            current_points = randint(1,6)
-            pygame.mixer.Sound.play(dice_sound)
-           
+            if roll_button().collidepoint(event.pos):
+                current_points = randint(1,6)
+                pygame.mixer.Sound.play(dice_sound)
+            
     if keys[pygame.K_q]:
         run = False
 
