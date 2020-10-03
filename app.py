@@ -6,7 +6,7 @@ pygame.init()
 pygame.font.init()
 pygame.mixer.init()
 
-dice_sound = pygame.mixer.Sound("dice.wav")
+dice_sound = pygame.mixer.Sound("sounds/dice.wav")
 
 screen_height = 400
 screen_width = 400
@@ -81,7 +81,7 @@ while run:
             run = False
 
         if event.type == pygame.MOUSEBUTTONUP:
-            current_points = randint(1,7)
+            current_points = randint(1,6)
             pygame.mixer.Sound.play(dice_sound)
            
     if keys[pygame.K_q]:
